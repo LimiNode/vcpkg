@@ -4,4 +4,10 @@ The package kurlyk provides the CMake target:
     target_link_libraries(main PRIVATE kurlyk::kurlyk)
 
 The package requires C++11 or later. Its HTTP and WebSocket transports use the
-vcpkg-provided curl, OpenSSL, and Asio dependencies.
+vcpkg-provided curl, OpenSSL, Asio, and Simple-WebSocket-Server dependencies.
+
+The default port is built with standalone Asio. Selecting Boost.Asio for the
+exported `kurlyk::kurlyk` target requires building Kurlyk from source with
+`KURLYK_USE_STANDALONE_ASIO=OFF`; the installed vcpkg package does not switch
+backend after configuration. The standalone `simple-websocket-server` port
+provides an additive `boost-asio` feature for consumers using SWS directly.

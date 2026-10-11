@@ -1,6 +1,6 @@
 {
   "name": "kurlyk",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Header-only C++11/17 HTTP and WebSocket client library",
   "homepage": "https://github.com/LimiNode/kurlyk",
   "license": "MIT",
@@ -8,6 +8,7 @@
     "asio",
     "curl",
     "openssl",
+    "simple-websocket-server",
     {
       "name": "vcpkg-cmake",
       "host": true
